@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+
+void pattern(int irow, int icol)
+{
+	int i, j;
+
+	for (i = 1; i <= irow; i++)
+	{
+	for (j = 1; j <= icol; j++)
+		{
+		if ((j==1) || (j==icol) || (i==irow) || (i==1))
+			{
+				printf(" *\t");
+			}
+			else
+			{
+				printf(" @\t");
+			}
+		}
+		printf("\n");
+	}
+}
+int main()
+{
+	int iv1, iv2;
+	printf("enter number");
+	scanf("%d,", &iv1);
+	printf("enter number");
+	scanf("%d,", &iv2);
+	pattern(iv1, iv2);
+
+	getch();
+	return 0;
+}
